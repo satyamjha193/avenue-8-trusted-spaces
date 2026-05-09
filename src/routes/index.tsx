@@ -111,7 +111,7 @@ function HomePage() {
 
       {/* ABOUT */}
       <section className="py-28 bg-background">
-        <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-16 items-center">
+        <div className="reveal mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <img
               src={aboutImg}
@@ -154,7 +154,7 @@ function HomePage() {
 
       {/* PROJECTS */}
       <section className="py-28 gradient-beige">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="reveal mx-auto max-w-7xl px-6">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
             <SectionHeading
               eyebrow="Featured Projects"
@@ -203,7 +203,7 @@ function HomePage() {
 
       {/* WHY CHOOSE US */}
       <section className="py-28 bg-background">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="reveal mx-auto max-w-7xl px-6">
           <SectionHeading
             eyebrow="Why Choose Us"
             title="A foundation built on trust, craft and clarity."
@@ -292,7 +292,7 @@ function HomePage() {
 
       {/* CTA */}
       <section className="py-24 bg-background">
-        <div className="mx-auto max-w-5xl px-6 text-center">
+        <div className="reveal mx-auto max-w-5xl px-6 text-center">
           <FileCheck className="mx-auto text-brand mb-6" size={32} />
           <h2 className="font-display text-4xl md:text-5xl text-brand text-balance">
             Ready to find a place to call your own?
