@@ -50,6 +50,8 @@ export function SiteFooter() {
               { to: "/about", label: "About" },
               { to: "/projects", label: "Projects" },
               { to: "/contact", label: "Contact" },
+              { to: "/videos", label: "Videos" },
+
             ].map((l) => (
               <li key={l.to}>
                 <Link
@@ -78,7 +80,7 @@ export function SiteFooter() {
             </li>
             <li className="flex gap-3">
               <Phone size={16} className="mt-0.5 shrink-0" />
-              <span>+91 00000 00000</span>
+              <span>+91 78934 02341</span>
             </li>
             <li className="flex gap-3">
               <Mail size={16} className="mt-0.5 shrink-0" />

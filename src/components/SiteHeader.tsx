@@ -1,39 +1,69 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/LOGO-AVENUE8INFRA.png";
 
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/projects", label: "Projects" },
-  { to: "/contact", label: "Contact" },
+  { to: "/videos", label: "Videos" },
 ] as const;
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+useEffect(() => {
+  let lastScrollY = window.scrollY;
+
+  const onScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    setScrolled(currentScrollY > 24);
+
+    if (currentScrollY > lastScrollY && currentScrollY > 80) {
+      setShowHeader(false);
+    } else {
+      setShowHeader(true);
+    }
+
+    lastScrollY = currentScrollY;
+  };
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  return () => window.removeEventListener("scroll", onScroll);
+}, []);
 
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        showHeader ? "translate-y-0" : "-translate-y-full"
+      } ${
         scrolled ? "glass-dark py-3" : "bg-transparent py-6"
       }`}
     >
-      <div className="mx-auto max-w-7xl px-6 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="size-10 rounded-sm border border-beige/40 flex items-center justify-center font-display text-beige">
-            A8
-          </div>
-          <div className="leading-tight">
-            <div className="font-display text-lg text-beige tracking-wide">AVENUE 8</div>
-            <div className="text-[10px] uppercase tracking-[0.25em] text-beige/70">Infra · Builders</div>
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 flex items-center justify-between gap-4">
+        <Link
+          to="/"
+          className="flex items-center gap-3 group min-w-0"
+        >
+          <img
+            src={logo}
+            alt="Avenue 8 Infra Logo"
+            className="h-12 sm:h-14 md:h-16 w-auto object-contain shrink-0"
+          />
+
+          <div className="leading-tight min-w-0">
+            <div className="font-display text-sm sm:text-base md:text-lg text-beige tracking-wide truncate">
+              AVENUE 8 INFRA
+            </div>
+
+            <div className="text-[8px] sm:text-[10px] uppercase tracking-[0.18em] text-beige/70 truncate">
+              Builders & Developers
+            </div>
           </div>
         </Link>
 

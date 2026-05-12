@@ -4,6 +4,9 @@ import { SectionHeading } from "@/components/SectionHeading";
 import aboutImg from "@/assets/about.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import { Compass, HeartHandshake, Target } from "lucide-react";
+import shafiImg from "@/assets/Leaders/md-shafi.jpeg";
+import ganeshImg from "@/assets/Leaders/durgaganesh.jpeg";
+import deverakonda1 from "@/assets/videos/devarakonda1.mp4";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -35,7 +38,16 @@ function AboutPage() {
 
       <section className="py-28 bg-background">
         <div className="mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-16 items-center">
-          <img src={aboutImg} alt="Avenue 8 building" loading="lazy" className="w-full aspect-[4/5] object-cover shadow-luxe" />
+          <video
+            src={deverakonda1}
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full aspect-[7/5] object-cover shadow-luxe"
+          >
+            Your browser does not support the video tag.
+          </video>
           <div>
             <SectionHeading
               eyebrow="Our Story"
@@ -67,26 +79,61 @@ function AboutPage() {
         </div>
       </section>
 
+      {/* //Leadership  */}
+
       <section className="py-28 bg-background">
         <div className="mx-auto max-w-7xl px-6">
-          <SectionHeading eyebrow="Leadership" title="The people behind Avenue 8." align="center" />
-          <div className="mt-16 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {[
-              { name: "MD. Shafi", role: "Chief Executive Officer", bio: "Leading Avenue 8 Infra with a vision for transparent, future-ready residential developments across Telangana." },
-              { name: "Mr. Durga Ganesh", role: "Marketing Agent", bio: "Connecting families with their ideal plots and homes through honest, attentive advisory." },
-            ].map((p) => (
-              <div key={p.name} className="bg-secondary/40 p-10 hover-lift">
-                <div className="size-20 rounded-full bg-brand text-beige font-display text-2xl flex items-center justify-center mb-6">
-                  {p.name.split(" ").map((n) => n[0]).slice(0, 2).join("")}
-                </div>
-                <h3 className="font-display text-2xl text-brand">{p.name}</h3>
-                <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mt-1">{p.role}</div>
-                <p className="mt-5 text-muted-foreground leading-relaxed">{p.bio}</p>
+          <SectionHeading
+            eyebrow="Leadership"
+            title="The people behind Avenue 8."
+            align="center"
+          />
+
+        <div className="mt-16 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          {[
+            {
+              name: "Mr. MD. Shafi",
+              role: "Chief Executive Officer",
+              bio: "Leading Avenue 8 Infra with a vision for transparent, future-ready residential developments across Telangana.",
+              image: shafiImg,
+            },
+            {
+              name: "Mr. Durga Ganesh",
+              role: "Marketing Director",
+              bio: "Connecting families with their ideal plots and homes through honest, attentive advisory.",
+              image: ganeshImg,
+            },
+          ].map((p) => (
+            <div
+              key={p.name}
+              className="bg-secondary/40 p-10 hover-lift rounded-2xl"
+            >
+              {/* Profile Image */}
+              <div className="size-24 rounded-full overflow-hidden mb-6 border-4 border-brand/20">
+                <img
+                  src={p.image}
+                  alt={p.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
-          </div>
+
+              <h3 className="font-display text-2xl text-brand">
+                {p.name}
+              </h3>
+
+              <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground mt-1">
+                {p.role}
+              </div>
+
+              <p className="mt-5 text-muted-foreground leading-relaxed">
+                {p.bio}
+              </p>
+            </div>
+          ))}
         </div>
+      </div>
       </section>
+
     </PageLayout>
   );
 }

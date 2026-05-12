@@ -74,6 +74,30 @@ function ProjectsPage() {
           </div>
         </div>
       </section>
+
+{/* MEDIA CTA */}
+<section className="py-20 bg-secondary/30">
+  <div className="mx-auto max-w-7xl px-6 text-center">
+
+    <h2 className="font-display text-3xl md:text-4xl text-brand">
+      Want to see our work in motion?
+    </h2>
+
+    <p className="mt-4 text-muted-foreground max-w-xl mx-auto">
+      Explore walkthroughs, site progress videos, drone shots and real project visuals from our developments.
+    </p>
+
+    <Link
+      to="/videos"
+      className="mt-10 inline-flex items-center gap-3 bg-brand text-beige px-8 py-4 text-sm uppercase tracking-[0.25em] hover:gap-5 hover:bg-brand/90 transition-all"
+    >
+      Look at our site videos
+      <ArrowRight size={16} />
+    </Link>
+
+  </div>
+</section>
+
     </PageLayout>
   );
 }
