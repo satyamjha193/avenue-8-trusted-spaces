@@ -4,8 +4,4 @@ export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
   },
-
-  vite: {
-    base: "/avenue-8-trusted-spaces/",
-  },
 });
