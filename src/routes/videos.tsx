@@ -7,7 +7,7 @@ import devarakonda1 from "@/assets/videos/devarakonda1.mp4";
 import devarakonda2 from "@/assets/videos/devarakonda2.mp4";
 import narayanpur1 from "@/assets/videos/narayanpur1.mp4";
 import narayanpur2 from "@/assets/videos/narayanpur2.mp4";
-import bacharam from "@/assets/videos/bacharam.mp4";
+import kalwakurthy from "@/assets/videos/bacharam.mp4";
 
 export const Route = createFileRoute("/videos")({
   component: MediaPage,
@@ -17,17 +17,17 @@ const mediaData = [
   {
     src: devarakonda1,
     title: "Devarakonda Venture",
-    subtitle: "Premium Open Plots",
+    subtitle: "Sunshine enclave DTCP Approved Layout",
   },
   {
     src: devarakonda2,
     title: "Devarakonda Layout",
-    subtitle: "Nature & Infrastructure",
+    subtitle: "Sunshine enclave DTCP Approved Layout",
   },
   {
     src: narayanpur1,
     title: "Narayanpur Project",
-    subtitle: "Drone Perspective",
+    subtitle: "RRR Green Farms Layout",
   },
   {
     src: narayanpur2,
@@ -35,9 +35,9 @@ const mediaData = [
     subtitle: "Site Progress View",
   },
   {
-    src: bacharam,
-    title: "Bacharam Venture",
-    subtitle: "Premium Investment Zone",
+    src: kalwakurthy,
+    title: "Kalwakurthy Venture",
+    subtitle: "Kalwakurthy Layout & Site Overview",
   },
 ];
 
@@ -125,7 +125,7 @@ function MediaPage() {
                     {video.title}
                   </h3>
 
-                  <p className="mt-3 text-sm uppercase tracking-[0.2em] text-muted-foreground">
+                  <p className="mt-3 text-sm tracking-[0.2em] text-muted-foreground">
                     {video.subtitle}
                   </p>
                 </div>

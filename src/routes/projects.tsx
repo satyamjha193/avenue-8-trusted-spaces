@@ -5,9 +5,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
+
 
 export const Route = createFileRoute("/projects")({
   head: () => ({
@@ -25,9 +23,9 @@ const all = [
   { img: project1, title: "Avenue Heights Villas", location: "Shadnagar, Telangana", type: "Independent Houses", price: "From ₹ 95 L", desc: "Twin-villa community with private gardens and modern interiors." },
   { img: project2, title: "Avenue Greens Layout", location: "Kothur, Telangana", type: "Residential Plots", price: "From ₹ 18 L", desc: "DTCP-approved plots in a fast-developing growth corridor." },
   { img: project3, title: "Avenue Pearl Residency", location: "LB Nagar, Telangana", type: "Premium Villas", price: "From ₹ 1.4 Cr", desc: "Gated villa community with pool, clubhouse and concierge." },
-  { img: gallery2, title: "Avenue Skyline Estates", location: "Maheshwaram, Telangana", type: "Residential Plots", price: "From ₹ 22 L", desc: "Master-planned plots beside upcoming infrastructure projects." },
-  { img: gallery3, title: "Avenue Crest Homes", location: "Adibatla, Telangana", type: "Independent Houses", price: "From ₹ 1.1 Cr", desc: "Boutique cluster of contemporary homes near IT corridor." },
-  { img: gallery1, title: "Avenue Royale Apartments", location: "LB Nagar, Telangana", type: "Premium Apartments", price: "From ₹ 78 L", desc: "Refined 3 BHK residences with curated amenities." },
+  
+  
+  
 ];
 
 function ProjectsPage() {

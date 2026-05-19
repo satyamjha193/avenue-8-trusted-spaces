@@ -5,14 +5,12 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Counter } from "@/components/Counter";
 import { useRef } from "react";
 import heroImg from "@/assets/hero.jpg";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
+
+import flats from "@/assets/flats.png";
+
 import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
 import plotAbout from "@/assets/Plot1.png";
-import devarakonda1 from "@/assets/videos/devarakonda1.mp4";
+
 import Plot2 from "@/assets/Plot2.png";
 import independentHouse from "@/assets/independentHouse.png";
 export const Route = createFileRoute("/")({
@@ -37,21 +35,56 @@ const features = [
 ];
 
 const projects = [
-  { img: independentHouse, title: "Avenue Heights Villas", location: "L.B.Nagar, Telangana", type: "Independent Houses", price: "From ₹ 95 L" },
-  { img: Plot2, title: "Avenue Greens Layout", location: "Narayanpur, Telangana", type: "Residential Plots", price: "From ₹ 18 L" },
-  { img: project3, title: "Avenue Pearl Residency", location: "LB Nagar, Telangana", type: "Premium Villas", price: "From ₹ 1.4 Cr" },
+  {
+    img: independentHouse,
+    title: "Independent Homes",
+    location: "Crafted for Comfortable Living",
+    type: "Residential",
+  },
+  {
+    img: Plot2,
+    title: "Residential Layouts",
+    location: "Planned Spaces for Future Growth",
+    type: "Plots",
+  },
+  {
+    img: flats,
+    title: "Modern Apartments",
+    location: "Urban Living with Lasting Value",
+    type: "Apartments",
+  },
 ];
-
 const testimonials = [
-  { name: "Ramesh Kumar", role: "Plot Owner, Kothur", quote: "From site visit to registration, every step was transparent. Avenue 8 delivered exactly what was promised." },
-  { name: "Lakshmi Devi", role: "Villa Owner, LB Nagar", quote: "The build quality and finishing of our independent house exceeded expectations. Truly a premium experience." },
-  { name: "Suresh Reddy", role: "Investor", quote: "I’ve invested in three of their layouts. Prime locations, clean paperwork, and reliable returns." },
-  { name: "Ramesh Kumar", role: "Plot Owner, Kothur", quote: "From site visit to registration, every step was transparent. Avenue 8 delivered exactly what was promised." },
-  { name: "Lakshmi Devi", role: "Villa Owner, LB Nagar", quote: "The build quality and finishing of our independent house exceeded expectations. Truly a premium experience." },
-  { name: "Suresh Reddy", role: "Investor", quote: "I’ve invested in three of their layouts. Prime locations, clean paperwork, and reliable returns." },
-  { name: "Ramesh Kumar", role: "Plot Owner, Kothur", quote: "From site visit to registration, every step was transparent. Avenue 8 delivered exactly what was promised." },
-  { name: "Lakshmi Devi", role: "Villa Owner, LB Nagar", quote: "The build quality and finishing of our independent house exceeded expectations. Truly a premium experience." },
-  { name: "Suresh Reddy", role: "Investor", quote: "I’ve invested in three of their layouts. Prime locations, clean paperwork, and reliable returns." },
+  {
+    name: "A. Janakiram",
+    quote:
+      "The location had good future development potential and the buying process was smooth and clear.",
+  },
+  {
+    name: "V. Yashwanth",
+    quote:
+      "We were looking for a plot in a developing area with proper documentation, and Avenue 8 helped us find a suitable option.",
+  },
+  {
+    name: "Rajshekar",
+    quote:
+      "The team explained the project details properly and guided us throughout the registration process.",
+  },
+  {
+    name: "Laxmi",
+    quote:
+      "A good experience overall. The venture location and road connectivity were the main reasons we purchased.",
+  },
+  {
+    name: "Sai Kumar",
+    quote:
+      "The site visit and documentation process were handled professionally and without unnecessary delays.",
+  },
+  {
+    name: "Arun Kumar",
+    quote:
+      "We wanted a plot in an area with upcoming growth, and the project matched our requirements well.",
+  },
 ];
 
 function HomePage() {
@@ -333,20 +366,7 @@ const scroll = (dir: "left" | "right") => {
     </div>
   </div>
 </section>
-      {/* GALLERY */}
-      <section className="py-28 gradient-beige">
-        <div className="mx-auto max-w-7xl px-6">
-          <SectionHeading eyebrow="Gallery" title="A glimpse of our crafted spaces." />
-          <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5">
-            <img src={gallery1} loading="lazy" className="row-span-2 w-full h-full object-cover aspect-[3/4] md:aspect-auto hover-lift" alt="Luxury interior" />
-            <img src={project1} loading="lazy" className="w-full aspect-square object-cover hover-lift" alt="Modern villa" />
-            <img src={gallery2} loading="lazy" className="w-full aspect-square object-cover hover-lift" alt="Aerial view of community" />
-            <img src={gallery3} loading="lazy" className="row-span-2 w-full h-full object-cover aspect-[3/4] md:aspect-auto hover-lift" alt="Villa entrance" />
-            <img src={project3} loading="lazy" className="w-full aspect-square object-cover hover-lift" alt="Pool and villas" />
-            <img src={project2} loading="lazy" className="w-full aspect-square object-cover hover-lift" alt="Plotted layout" />
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA */}
       <section className="py-24 bg-background">

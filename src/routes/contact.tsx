@@ -346,19 +346,38 @@ function ContactPage() {
       </section>
 
       {/* MAP */}
-      <section className="bg-background pb-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="overflow-hidden rounded-[2rem] border border-border shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
-            <iframe
-              title="Avenue 8 Infra office map"
-              src="https://www.google.com/maps?q=17.34865,78.5524216&z=17&output=embed"
-              className="h-[500px] w-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-        </div>
-      </section>
+<section className="bg-background pb-24">
+  <div className="mx-auto max-w-7xl px-4 sm:px-6">
+
+    {/* HEADING */}
+    <div className="text-center mb-10">
+      <div className="text-xs tracking-[0.3em] text-muted-foreground uppercase">
+        Visit Us
+      </div>
+
+      <h2 className="mt-3 font-display text-4xl text-brand">
+        Our Office Location
+      </h2>
+
+      <p className="mt-4 max-w-2xl mx-auto text-muted-foreground leading-relaxed">
+        Visit our office to explore ongoing ventures, discuss plot availability,
+        and get complete project details from our team.
+      </p>
+    </div>
+
+    {/* MAP CONTAINER */}
+    <div className="overflow-hidden rounded-[2rem] border border-border shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
+      <iframe
+        title="Avenue 8 Infra office map"
+        src="https://www.google.com/maps?q=17.34865,78.5524216&z=17&output=embed"
+        className="h-[500px] w-full border-0"
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+      />
+    </div>
+
+  </div>
+</section>
     </PageLayout>
   );
 }
