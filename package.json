@@ -3,7 +3,6 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
-  "homepage": "https://github.com/satyamjha193/avenue-8-trusted-spaces/",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
