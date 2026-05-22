@@ -6,12 +6,16 @@ import {
   createRouter,
 } from "@tanstack/react-router";
 
+import { QueryClient } from "@tanstack/react-query";
+
 import { routeTree } from "./routeTree.gen";
+
+const queryClient = new QueryClient();
 
 const router = createRouter({
   routeTree,
   context: {
-    queryClient: undefined!,
+    queryClient,
   },
 });
 
@@ -21,8 +25,20 @@ declare module "@tanstack/react-router" {
   }
 }
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+function App() {
+  console.log("APP STARTED");
+
+  return <RouterProvider router={router} />;
+}
+
+const root = document.getElementById("root");
+
+if (!root) {
+  throw new Error("Root element missing");
+}
+
+ReactDOM.createRoot(root).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </React.StrictMode>
 );
